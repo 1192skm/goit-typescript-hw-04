@@ -17,8 +17,8 @@ export function Observer({ children, onContentEndVisible }: Props) {
       root: null;
 }
 
-    const options:Options = {
-      rootMargin: '0px',
+    const options: IntersectionObserverInit = {
+      rootMargin: "0px",
       threshold: 1.0,
       root: null,
     };

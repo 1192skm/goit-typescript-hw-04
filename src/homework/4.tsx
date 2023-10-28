@@ -5,14 +5,16 @@ type MenuIds = "first" | "second" | "last";
 type Menu = { id: MenuIds; title: string };
 
 type SelectedMenu = {
-  id?: MenuIds;
+  id: MenuIds;
 };
 // Додати тип Menu Selected
 type MenuSelected = {
   selectedMenu: SelectedMenu;
 };
 const MenuSelectedContext = createContext<MenuSelected>({
-  selectedMenu: {},
+  selectedMenu: {
+    id: "first"
+  },
 });
 
 // Додайте тип MenuAction
